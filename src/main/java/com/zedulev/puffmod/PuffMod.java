@@ -1,5 +1,6 @@
 package com.zedulev.puffmod;
 
+import com.zedulev.puffmod.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,6 +19,8 @@ public class PuffMod
 
     public PuffMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(eventBus);
 
         eventBus.addListener(this::setup);
 
